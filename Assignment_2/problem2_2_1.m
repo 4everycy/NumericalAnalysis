@@ -23,7 +23,6 @@ for j = 1 : (n - 1)
 end
 L_a = L
 U_a = A
-LU_a = L_a * U_a
 
 % factorize b
 n = 3; A = A_b;
@@ -42,7 +41,6 @@ for j = 1 : (n - 1)
 end
 L_b = L
 U_b = A
-LU_b = L_b * U_b
 
 % factorize c
 n = 4; A = A_c;
@@ -61,4 +59,3 @@ for j = 1 : (n - 1)
 end
 L_c = L
 U_c = A
-LU_c = L_c * U_c

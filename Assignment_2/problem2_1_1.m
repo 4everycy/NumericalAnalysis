@@ -20,7 +20,6 @@ for j = 1 : (n - 1)
         b(i) = b(i) - mult * b(j);
     end
 end
-
 % back-substitution of a
 for i = n : -1 : 1
     for j = (i + 1) : n
@@ -28,10 +27,8 @@ for i = n : -1 : 1
     end
     x(i) = b(i) / a(i, i);
 end
-
 % output of a
 x_a = x
-
 
 % elimination of b
 a = a_b; b = b_b;
@@ -44,7 +41,6 @@ for j = 1 : (n - 1)
         b(i) = b(i) - mult * b(j);
     end
 end
-
 % back-substitution of b
 for i = n : -1 : 1
     for j = (i + 1) : n
@@ -52,10 +48,8 @@ for i = n : -1 : 1
     end
     x(i) = b(i) / a(i, i);
 end
-
 % output of b
 x_b = x
-
 
 % elimination of c
 a = a_c; b = b_c;
@@ -68,7 +62,6 @@ for j = 1 : (n - 1)
         b(i) = b(i) - mult * b(j);
     end
 end
-
 % back-substitution of c
 for i = n : -1 : 1
     for j = (i + 1) : n
@@ -76,6 +69,5 @@ for i = n : -1 : 1
     end
     x(i) = b(i) / a(i, i);
 end
-
 % output of c
 x_c = x
