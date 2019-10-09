@@ -12,7 +12,7 @@ b = zeros(n, 1);
 b([1, end]) = [1, -1]; % create b
 
 % initialize
-TOL = 0.5 * 10^(-3); % ensure 3 correct decimal places
+TOL = 0.5e-3; % ensure 3 correct decimal places
 x = ones(n, 1);
 x(2:2:end, :) = -1; % create accurate solution x
 x_compute = zeros(n, 1); % initialize x_compute
