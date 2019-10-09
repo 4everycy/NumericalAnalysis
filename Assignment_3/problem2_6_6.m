@@ -9,6 +9,8 @@ L = spdiags(temp, -1, n, n) + spdiags(temp, -2, n, n);
 A = L + U + D; % create A
 % print A
 spy(A)
+disp('press any key to continue...')
+pause
 
 x = ones(n, 1);
 b = A * x;
