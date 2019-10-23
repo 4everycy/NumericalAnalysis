@@ -2,22 +2,22 @@
 
 format long;
 % (a)
-x0 = [0.6 : 0.1 : 1];
+x0 = [0.6:0.1:1];
 y0 = [1.433329 1.632316 1.896481 2.247908 2.718282];
 n = length(x0);
-coe = newtdd(x0, y0, n)
+coef = newtdd(x0, y0, n)
 % (b)
 x1 = 0.82; x2 = 0.98;
-P1 = nest(n-1, coe, x1, x0)
-P2 = nest(n-1, coe, x2, x0)
+P1 = nest(n-1, coef, x1, x0)
+P2 = nest(n-1, coef, x2, x0)
 % (c)
 upperBound1 = findUpperBound(x1, x0)
 upperBound2 = findUpperBound(x2, x0)
 % (d)
-itv1 = [0.5 : 0.01 : 1];
-itv2 = [0 : 0.01 : 2];
-actualError1 = nest(n-1, coe, itv1, x0);
-actualError2 = nest(n-1, coe, itv2, x0);
+itv1 = [0.5:0.01:1];
+itv2 = [0:0.01:2];
+actualError1 = nest(n-1, coef, itv1, x0);
+actualError2 = nest(n-1, coef, itv2, x0);
 subplot(1, 2, 1)
 plot(x0, y0, 'o', itv1, actualError1, 'LineWidth',1.5)
 title('[0.5, 1]')

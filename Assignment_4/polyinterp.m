@@ -2,8 +2,8 @@
 
 function y0= polyinterp(x, y, x0)
 n = length(x);
-coe = newtdd(x, y, n);
-y0 = nest(n-1, coe, x0, x);
+coef = newtdd(x, y, n);
+y0 = nest(n-1, coef, x0, x);
 end
 
 % local functions
