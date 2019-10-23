@@ -1,6 +1,5 @@
 % 3.4 Computer Problems: 1
 
-% case(a)
 x_a = [0 1 2 3]; y_a = [3 5 4 1];
 x_b = [-1 0 3 4 5]; y_b = [3 5 1 1 1 ];
 subplot(1, 2, 1)
